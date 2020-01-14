@@ -1,0 +1,93 @@
+.item.completed {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.603);
+}
+
+body{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+
+  margin: 0 auto;
+}
+
+form input, input {
+  padding: 1vh 1vw;
+
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.searchBar{
+  margin-top: 1vh;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: space-evenly;
+
+  margin: 2vh 0;
+}
+
+button{
+  display: inline-flex;
+  justify-content: center;
+}
+
+.addBtn{
+  width: 30%;
+  background: rgba(82, 82, 255, 0.911);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 1vh 1vw;
+  margin-bottom: 5vh;
+}
+
+.deleteBtn{
+  background: red;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+}
+
+
+
+
+.listContainer{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.item{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+
+  padding: 1vh 1vw;
+
+  width: 100px;
+
+  margin: 0 auto;
+}
+
+h4{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 3vh 1vw;
+  width: 300px;
+  margin: 0 auto;
+}
