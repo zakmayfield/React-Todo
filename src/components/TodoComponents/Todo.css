@@ -8,6 +8,9 @@ body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+
+
 form{
   display: flex;
   flex-flow: column;
@@ -28,10 +31,13 @@ form input, input {
   margin-top: 1vh;
 }
 
-.btnContainer{
-  display: flex;
-  justify-content: space-evenly;
 
+
+
+.btnContainer{
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
   margin: 2vh 0;
 }
 
@@ -56,6 +62,19 @@ button{
 .deleteBtn{
   background: red;
   color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+}
+
+.saveBtn{
+  background: rgb(15, 133, 15);
+  color: white;
+  width: 60px;
   font-weight: 600;
   border: none;
   border-radius: 5px;

@@ -12,7 +12,10 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={
-      newThingsToDo: thingsToDo
+      // newThingsToDo: thingsToDo,
+      newThingsToDo: localStorage.getItem("TO_DO_LIST") ?
+        JSON.parse(localStorage.getItem("TO_DO_LIST")) :
+        thingsToDo
       // 1.) We have to create our state -- newThingsToDo -- with the thingsToDo array up above, and then we will be updating this state with new tasks as we add them
     }
   }
@@ -63,6 +66,10 @@ class App extends React.Component {
     // 21.) and then when we click delete which executes this function, it then passes our nonCompletedList to our state and replaces it with the task items that have not been selected to delete. AND WE ARE FINISHED!!!
   }
 
+  saveTasks = () => {
+    localStorage.setItem("TO_DO_LIST", JSON.stringify(this.state.newThingsToDo));
+  }
+
 
   render() {
     return (
@@ -71,7 +78,7 @@ class App extends React.Component {
         <TodoForm addItem={this.addItem} />
           {/* 4.) here we are passing our addItem method down to our TodoForm so that way our form will be able to access this method --> continue to TodoForm.js */}
 
-        <TodoList thingsToDo={this.state.newThingsToDo} deleteTask={this.deleteTask} toggleItem={this.toggleItem}/>
+        <TodoList thingsToDo={this.state.newThingsToDo} deleteTask={this.deleteTask} saveTasks={this.saveTasks} toggleItem={this.toggleItem}/>
           {/* 10.) here with ***thingsToDo={this.state.newThingsToDo}*** ignore toggleItem, we are passing our state of --newThingsToDo-- down to our TodoList component as thingsToDo --> continue to TodoList.js */}
           {/* 15.) we then pass our method down as props via toggleItem --> continue to TodoList.js */}
       </div>

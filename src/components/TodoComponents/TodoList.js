@@ -48,7 +48,10 @@ const TodoList = props => {
 
       {/* 16.) we then pass our toggleItem prop down as props to <Item /> --? continue to Item.js */}
 
-      <button className="deleteBtn" onClick={props.deleteTask}>Delete Completed</button>
+      <div className="btnContainer">
+        <button className="saveBtn" onClick={props.saveTasks}>Save</button>
+        <button className="deleteBtn" onClick={props.deleteTask}>Delete Completed</button>
+      </div>
     </div>
   ) 
 }
